@@ -1,16 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import numpy as np
 
-
-# In[2]:
-
-
-def betti_number(facets):
+def betti_number(facets):   # the input is the set of facets of a simplicial complex K
     
     def make_subsets(List):
         upList = list()
@@ -84,36 +77,14 @@ def betti_number(facets):
     return betties
 
 
-# In[3]:
-
-
 facets = [[1, 2], [2, 3], [3, 1]]
 betti_number(facets)
-
-
-# In[4]:
-
 
 facets = [[1, 2, 3]]
 betti_number(facets)
 
-
-# In[5]:
-
-
 facets = [[1, 2, 3], [1, 2, 4], [1, 2, 5], [1, 3, 5]]
 betti_number(facets)
 
-
-# In[ ]:
-
-
-facets = [[1, 2, 3, 4], [1, 2, 3, 5], [1, 2, 4, 5], [2, 3, 4, 5]]
+facets = [[1, 2, 3, 4], [1, 2, 3, 5], [1, 2, 4, 5], [2, 3, 4, 5]]  # too heavy to calculate... O(2^2^|V|)
 betti_number(facets)
-
-
-# In[ ]:
-
-
-
-
